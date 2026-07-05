@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youyou Wang, PharmD — Registered Pharmacist</title>
+<meta name="description" content="Youyou Wang, PharmD. Registered pharmacist licensed in California, trained across nine pharmacy practice settings in New York.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7FAF8;
+  --card:#FFFFFF;
+  --ink:#14231D;
+  --muted:#52655D;
+  --green:#17604B;
+  --green-deep:#0E3D30;
+  --amber:#B26B24;
+  --line:#DCE6E1;
+  --display:"Newsreader",Georgia,serif;
+  --body:"Public Sans",-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--green);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--green-deep)}
+:focus-visible{outline:2px solid var(--green);outline-offset:3px;border-radius:2px}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+
+/* ---------- hero ---------- */
+.hero{padding:88px 0 56px;border-bottom:1px solid var(--line)}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--green);margin-bottom:20px;
+}
+h1{
+  font-family:var(--display);font-weight:500;
+  font-size:clamp(40px,7vw,64px);line-height:1.05;letter-spacing:-.01em;
+}
+h1 .cred{font-size:.42em;font-weight:400;color:var(--muted);letter-spacing:0;vertical-align:.5em;margin-left:.35em;white-space:nowrap}
+.lede{
+  font-family:var(--display);font-size:clamp(19px,2.6vw,23px);font-weight:400;
+  color:var(--muted);max-width:34em;margin-top:20px;line-height:1.45;
+}
+.lede strong{color:var(--ink);font-weight:500}
+.license-line{
+  font-family:var(--mono);font-size:13px;color:var(--green-deep);
+  margin-top:28px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.license-line .dot{width:8px;height:8px;border-radius:50%;background:var(--green);flex:none}
+.hero-contact{margin-top:36px;display:flex;gap:22px;flex-wrap:wrap;font-size:14.5px;font-weight:500}
+.hero-contact a{text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:2px}
+.hero-contact a:hover{border-color:var(--green)}
+
+/* page-load rise */
+@media (prefers-reduced-motion:no-preference){
+  .hero > *{opacity:0;transform:translateY(10px);animation:rise .6s cubic-bezier(.2,.7,.3,1) forwards}
+  .hero > *:nth-child(2){animation-delay:.07s}
+  .hero > *:nth-child(3){animation-delay:.14s}
+  .hero > *:nth-child(4){animation-delay:.21s}
+  .hero > *:nth-child(5){animation-delay:.28s}
+  @keyframes rise{to{opacity:1;transform:none}}
+}
+
+/* ---------- sections ---------- */
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:32px}
+.sec-head h2{font-family:var(--display);font-weight:500;font-size:28px;letter-spacing:-.01em}
+.sec-head .tag{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.08em}
+
+/* ---------- licensure registry (signature) ---------- */
+.registry{border:1px solid var(--line);border-radius:10px;background:var(--card);overflow:hidden}
+.registry-row{
+  display:grid;grid-template-columns:1fr auto;gap:6px 24px;
+  padding:20px 24px;border-bottom:1px solid var(--line);
+}
+.registry-row:last-child{border-bottom:none}
+.registry-row .r-name{font-weight:600;font-size:15.5px}
+.registry-row .r-org{color:var(--muted);font-size:14px}
+.registry-row .r-id{font-family:var(--mono);font-size:12.5px;color:var(--green-deep);margin-top:2px}
+.registry-row .r-dates{
+  font-family:var(--mono);font-size:12px;color:var(--muted);
+  text-align:right;align-self:start;grid-row:span 3;
+  display:flex;flex-direction:column;align-items:flex-end;gap:8px;
+}
+.status{
+  display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--green);border:1px solid var(--green);
+  border-radius:3px;padding:2px 8px;
+}
+.status.honor{color:var(--amber);border-color:var(--amber)}
+@media (max-width:560px){
+  .registry-row{grid-template-columns:1fr}
+  .registry-row .r-dates{text-align:left;align-items:flex-start;grid-row:auto;margin-top:8px}
+}
+
+/* ---------- experience ---------- */
+.setting{margin-bottom:44px}
+.setting:last-child{margin-bottom:0}
+.setting-head{
+  display:flex;align-items:baseline;gap:12px;margin-bottom:18px;
+  padding-bottom:10px;border-bottom:2px solid var(--green);
+}
+.setting-head h3{font-family:var(--display);font-weight:500;font-size:20px}
+.setting-head .count{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.job{padding:18px 0 4px}
+.job + .job{border-top:1px dashed var(--line)}
+.job-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.job-top h4{font-size:16px;font-weight:600}
+.job-top .meta{font-family:var(--mono);font-size:12.5px;color:var(--muted);white-space:nowrap}
+.job .role{font-size:14px;color:var(--green);font-weight:500;margin-top:2px}
+.job ul{margin:10px 0 14px;padding-left:20px;color:#2C3E37}
+.job li{margin-bottom:6px;font-size:15px}
+.job li:last-child{margin-bottom:0}
+
+/* ---------- education / publication ---------- */
+.edu{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.edu h3{font-family:var(--display);font-weight:500;font-size:21px}
+.edu .meta{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.edu-sub{color:var(--muted);margin-top:6px;font-size:15px}
+.pub-cite{
+  background:var(--card);border:1px solid var(--line);border-left:3px solid var(--green);
+  border-radius:0 10px 10px 0;padding:20px 24px;margin-top:18px;
+  font-family:var(--display);font-size:16.5px;line-height:1.55;
+}
+.pub-cite .doi{display:block;font-family:var(--mono);font-size:12.5px;margin-top:10px}
+.pub-role{color:var(--muted);font-size:15px;max-width:44em;margin-top:14px}
+
+/* ---------- resume paper ---------- */
+#resume .paper-zone{display:flex;gap:36px;align-items:center;flex-wrap:wrap}
+.paper{
+  flex:none;width:200px;aspect-ratio:8.5/11;cursor:pointer;
+  background:#FFFDF8;border:1px solid #E7DCC8;border-radius:3px;
+  box-shadow:0 1px 2px rgba(20,35,29,.08),0 12px 28px -12px rgba(20,35,29,.28);
+  position:relative;padding:22px 18px;text-align:left;
+  transition:transform .25s cubic-bezier(.2,.7,.3,1),box-shadow .25s;
+  font:inherit;color:inherit;
+}
+.paper:hover,.paper:focus-visible{
+  transform:translateY(-5px) rotate(-.6deg);
+  box-shadow:0 2px 3px rgba(20,35,29,.08),0 22px 40px -14px rgba(20,35,29,.35);
+}
+.paper::after{ /* folded corner */
+  content:"";position:absolute;top:0;right:0;width:26px;height:26px;
+  background:linear-gradient(225deg,var(--paper) 50%,#EFE5D2 50%);
+  border-bottom-left-radius:3px;
+}
+.paper .p-name{display:block;font-family:var(--display);font-size:14px;font-weight:600;color:var(--amber)}
+.paper .p-line{display:block;height:4px;background:#EDE3D0;border-radius:2px;margin-top:8px}
+.paper .p-line.w60{width:60%}
+.paper .p-line.w80{width:80%}
+.paper .p-hint{
+  position:absolute;left:18px;bottom:18px;right:18px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--amber);
+  text-transform:uppercase;
+}
+.paper-info{flex:1;min-width:260px}
+.paper-info p{color:var(--muted);max-width:36em}
+.paper-actions{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;font-weight:600;font-size:14.5px;text-decoration:none;
+  border-radius:6px;padding:10px 18px;cursor:pointer;font-family:var(--body);
+}
+.btn-primary{background:var(--green);color:#fff;border:1px solid var(--green)}
+.btn-primary:hover{background:var(--green-deep);border-color:var(--green-deep);color:#fff}
+.btn-ghost{background:transparent;color:var(--green);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--green)}
+
+/* ---------- preview dialog ---------- */
+dialog#pdfModal{
+  margin:auto;
+  width:min(880px,94vw);height:min(92vh,1100px);
+  border:none;border-radius:12px;padding:0;
+  box-shadow:0 30px 80px -20px rgba(14,61,48,.5);
+}
+dialog#pdfModal::backdrop{background:rgba(14,35,28,.55);backdrop-filter:blur(2px)}
+.modal-bar{
+  display:flex;align-items:center;gap:12px;justify-content:space-between;
+  padding:12px 16px;background:var(--green-deep);color:#fff;
+}
+.modal-bar .m-title{font-family:var(--mono);font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.modal-bar .m-actions{display:flex;gap:8px;flex:none}
+.modal-bar a,.modal-bar button{
+  font-family:var(--body);font-size:13px;font-weight:600;cursor:pointer;
+  color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  border-radius:5px;padding:6px 12px;text-decoration:none;
+}
+.modal-bar a:hover,.modal-bar button:hover{background:rgba(255,255,255,.22);color:#fff}
+#pdfFrame{width:100%;height:calc(100% - 53px);border:none;background:#525659}
+
+/* ---------- footer ---------- */
+footer{padding:56px 0 72px}
+footer .f-name{font-family:var(--display);font-size:22px;font-weight:500}
+footer .f-links{margin-top:14px;display:flex;gap:20px;flex-wrap:wrap;font-size:14.5px}
+footer .f-note{margin-top:28px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Pharmacist Portfolio</p>
+    <h1>Youyou Wang<span class="cred">PharmD, RPh</span></h1>
+    <p class="lede">Registered pharmacist licensed in <strong>California</strong>, trained across <strong>nine practice settings</strong> in New York — community, managed care, specialty, and hospital pharmacy.</p>
+    <p class="license-line"><span class="dot" aria-hidden="true"></span>California State Board of Pharmacy&nbsp;·&nbsp;RPH 92546&nbsp;·&nbsp;Active</p>
+    <nav class="hero-contact" aria-label="Contact">
+      <a href="mailto:annwanglc@gmail.com">annwanglc@gmail.com</a>
+      <a href="tel:+19293935905">929-393-5905</a>
+      <a href="https://linkedin.com/in/youyouwang0202" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="#resume">Resume ↓</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="licensure">
+    <div class="wrap">
+      <div class="sec-head"><h2>Licensure &amp; Certifications</h2><span class="tag">REGISTRY</span></div>
+      <div class="registry">
+        <div class="registry-row">
+          <div>
+            <div class="r-name">Registered Pharmacist License</div>
+            <div class="r-org">California State Board of Pharmacy</div>
+            <div class="r-id">RPH 92546</div>
+          </div>
+          <div class="r-dates"><span class="status">Active</span><span>Issued Jun 2026 · Expires Feb 2028</span></div>
+        </div>
+        <div class="registry-row">
+          <div>
+            <div class="r-name">Basic Life Support for Healthcare Providers (BLS)</div>
+            <div class="r-org">American Heart Association</div>
+          </div>
+          <div class="r-dates"><span class="status">Active</span><span>Issued Jun 2026 · Expires Jun 2028</span></div>
+        </div>
+        <div class="registry-row">
+          <div>
+            <div class="r-name">Pharmacy-Based Immunization Delivery Certificate</div>
+            <div class="r-org">American Pharmacists Association</div>
+          </div>
+          <div class="r-dates"><span>Issued Aug 2022</span></div>
+        </div>
+        <div class="registry-row">
+          <div>
+            <div class="r-name">NYS Pharmacy Intern with Immunization Certificate</div>
+            <div class="r-org">New York State Education Department</div>
+            <div class="r-id">No. 103334</div>
+          </div>
+          <div class="r-dates"><span>Issued 2022</span></div>
+        </div>
+        <div class="registry-row">
+          <div>
+            <div class="r-name">Dean's List — Top 5%</div>
+            <div class="r-org">St. John's University</div>
+          </div>
+          <div class="r-dates"><span class="status honor">Honor</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head"><h2>Professional Experience</h2><span class="tag">9 SITES · 4 SETTINGS</span></div>
+
+      <div class="setting">
+        <div class="setting-head"><h3>Community Pharmacy</h3><span class="count">1 site</span></div>
+        <article class="job">
+          <div class="job-top"><h4>Walgreens</h4><span class="meta">New York, NY · 2025</span></div>
+          <p class="role">Pharmacy Intern</p>
+          <ul>
+            <li>Administered 50–100 adult immunizations monthly, including influenza, COVID-19, RSV, pneumococcal, and shingles vaccines.</li>
+            <li>Conducted MTM services, comprehensive medication reviews, and clinical follow-up calls to assess adherence, effectiveness, and tolerability.</li>
+            <li>Coordinated prescription transfers and resolved insurance claim and medication access issues with patients, payers, and community pharmacies.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="setting">
+        <div class="setting-head"><h3>Managed Care &amp; Benefits</h3><span class="count">2 sites</span></div>
+        <article class="job">
+          <div class="job-top"><h4>NYHTC and HANYC Employee Benefit Funds</h4><span class="meta">New York, NY · 2025</span></div>
+          <p class="role">Pharmacy Intern</p>
+          <ul>
+            <li>Supported prior authorization workflows by communicating with insurance companies and provider offices, obtaining required documentation, and coordinating benefit verification.</li>
+            <li>Assisted with medication access issues and approval follow-up for member therapies.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="job-top"><h4>Fidelis Care New York</h4><span class="meta">New York, NY · 2025</span></div>
+          <p class="role">Pharmacy Intern</p>
+          <ul>
+            <li>Reviewed prior authorization and formulary management processes.</li>
+            <li>Conducted copay investigations and medication access reviews.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="setting">
+        <div class="setting-head"><h3>Specialty &amp; Long-Term Care</h3><span class="count">2 sites</span></div>
+        <article class="job">
+          <div class="job-top"><h4>Total Care Rx</h4><span class="meta">New York, NY · 2025</span></div>
+          <p class="role">Pharmacy Intern</p>
+          <ul>
+            <li>Managed transplant and immunosuppressive medication workflows.</li>
+            <li>Coordinated specialty medication services for immunocompromised patients.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="job-top"><h4>Avanti Health Care Services</h4><span class="meta">New York, NY · 2025</span></div>
+          <p class="role">Pharmacy Intern</p>
+          <ul>
+            <li>Prepared non-sterile compounded medications and TPN formulations.</li>
+            <li>Assisted with blister packaging and medication adherence programs.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="setting">
+        <div class="setting-head"><h3>Hospital &amp; Health-System</h3><span class="count">4 sites</span></div>
+        <article class="job">
+          <div class="job-top"><h4>NewYork-Presbyterian Queens</h4><span class="meta">Queens, NY · 2025</span></div>
+          <p class="role">Pharmacy Intern</p>
+          <ul>
+            <li>Counseled patients on management of diabetes, hypertension, and hyperlipidemia.</li>
+            <li>Conducted chart reviews for patients with diabetes, hypertension, and hyperlipidemia.</li>
+            <li>Evaluated medication therapy and developed recommendations for treatment optimization.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="job-top"><h4>NYU Langone Hospital Long Island</h4><span class="meta">Long Island, NY · 2025</span></div>
+          <p class="role">Pharmacy Intern</p>
+          <ul>
+            <li>Performed Excel-based analysis of smart pump and medication-use data.</li>
+            <li>Evaluated meta-analyses, survival analyses, and clinical literature.</li>
+            <li>Participated in P&amp;T Committee meetings and formulary review discussions.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="job-top"><h4>Northwell Health Forest Hills</h4><span class="meta">Forest Hills, NY · 2025</span></div>
+          <p class="role">Pharmacy Intern</p>
+          <ul>
+            <li>Performed cart fill activities and medication distribution for inpatient units.</li>
+            <li>Prepared unit-dose medications through packaging and repackaging processes.</li>
+            <li>Assisted with medication inventory management, restocking, and return-to-stock procedures.</li>
+          </ul>
+        </article>
+        <article class="job">
+          <div class="job-top"><h4>St. Mary's Hospital for Children</h4><span class="meta">New York, NY · 2025</span></div>
+          <p class="role">Pharmacy Intern</p>
+          <ul>
+            <li>Reviewed medication regimens for medically complex pediatric patients.</li>
+            <li>Compounded suspensions, solutions, ointments, batch preparations, and oral syringe preparations.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="sec-head"><h2>Education</h2></div>
+      <div class="edu">
+        <h3>St. John's University College of Pharmacy</h3>
+        <span class="meta">Queens, NY · Sep 2019 – Jan 2026</span>
+      </div>
+      <p class="edu-sub">Doctor of Pharmacy (PharmD) · GPA 3.71 / 4.0 · Dean's List (Top 5%)</p>
+    </div>
+  </section>
+
+  <section id="publication">
+    <div class="wrap">
+      <div class="sec-head"><h2>Publication &amp; Research</h2></div>
+      <div class="edu">
+        <h3>St. John's University, Dept. of Pharmaceutical Sciences</h3>
+        <span class="meta">Research Assistant · Jun 2022 – Present</span>
+      </div>
+      <p class="pub-role">Cancer cell culture, passage, and MTT assays in a multidrug-resistance research lab under Dr. Zhe-Sheng Chen; collaborated with PhD researchers on data collection and abstract preparation.</p>
+      <blockquote class="pub-cite">
+        Bo L, <strong>Wang Y</strong>, Li Y, Wurpel JND, Huang Z, Chen ZS. The Battlefield of Chemotherapy in Pediatric Cancers. <em>Cancers (Basel)</em>. 2023;15(7):1963.
+        <a class="doi" href="https://doi.org/10.3390/cancers15071963" target="_blank" rel="noopener">DOI: 10.3390/cancers15071963 ↗</a>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="resume">
+    <div class="wrap">
+      <div class="sec-head"><h2>Resume</h2><span class="tag">PDF</span></div>
+      <div class="paper-zone">
+        <button class="paper" id="paperBtn" aria-haspopup="dialog" aria-label="Preview resume PDF">
+          <span class="p-name">YOUYOU WANG</span>
+          <span class="p-line w60"></span>
+          <span class="p-line w80"></span>
+          <span class="p-line"></span>
+          <span class="p-line w80"></span>
+          <span class="p-line w60"></span>
+          <span class="p-hint">Click to preview</span>
+        </button>
+        <div class="paper-info">
+          <p>The complete resume as a one-page PDF — the same document you would receive by email. Preview it here or download a copy.</p>
+          <div class="paper-actions">
+            <button class="btn btn-primary" id="previewBtn">Preview resume</button>
+            <a class="btn btn-ghost" href="assets/YouyouWang_CA_Pharmacy_Resume.pdf" download>Download PDF</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="f-name">Youyou Wang, PharmD, RPh</p>
+    <div class="f-links">
+      <a href="mailto:annwanglc@gmail.com">annwanglc@gmail.com</a>
+      <a href="tel:+19293935905">929-393-5905</a>
+      <a href="https://linkedin.com/in/youyouwang0202" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="f-note">CA BOARD OF PHARMACY · RPH 92546</p>
+  </div>
+</footer>
+
+<dialog id="pdfModal" aria-label="Resume preview">
+  <div class="modal-bar">
+    <span class="m-title">YouyouWang_CA_Pharmacy_Resume.pdf</span>
+    <span class="m-actions">
+      <a href="assets/YouyouWang_CA_Pharmacy_Resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
+      <a href="assets/YouyouWang_CA_Pharmacy_Resume.pdf" download>Download</a>
+      <button id="closeModal">Close</button>
+    </span>
+  </div>
+  <iframe id="pdfFrame" title="Resume PDF preview"></iframe>
+</dialog>
+
+<script>
+(function(){
+  var modal=document.getElementById('pdfModal');
+  var frame=document.getElementById('pdfFrame');
+  var src='assets/YouyouWang_CA_Pharmacy_Resume.pdf';
+  function openPreview(){
+    // On small screens most mobile browsers can't render PDFs in an iframe — open natively instead.
+    if(window.innerWidth<640){window.open(src,'_blank');return}
+    if(!frame.src)frame.src=src;
+    modal.showModal();
+  }
+  document.getElementById('paperBtn').addEventListener('click',openPreview);
+  document.getElementById('previewBtn').addEventListener('click',openPreview);
+  document.getElementById('closeModal').addEventListener('click',function(){modal.close()});
+  modal.addEventListener('click',function(e){if(e.target===modal)modal.close()});
+})();
+</script>
+</body>
+</html>

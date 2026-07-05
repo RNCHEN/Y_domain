@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+
+# 源材料,不发布到公开仓库(网站用的是 assets/ 里的副本)
+/YouyouWang_CA_Pharmacy_Resume.pdf
+/simplify 看的.pdf
