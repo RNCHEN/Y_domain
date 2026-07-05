@@ -40,6 +40,17 @@ a:hover{color:var(--green-deep)}
 
 /* ---------- hero ---------- */
 .hero{padding:88px 0 56px;border-bottom:1px solid var(--line)}
+.hero-grid{display:flex;align-items:center;justify-content:space-between;gap:48px}
+.hero-text{flex:1;min-width:0}
+.hero-photo{
+  flex:none;width:240px;aspect-ratio:4/5;object-fit:cover;object-position:50% 14%;
+  border-radius:14px;border:1px solid var(--line);
+  box-shadow:0 18px 40px -18px rgba(14,61,48,.4);
+}
+@media (max-width:760px){
+  .hero-grid{flex-direction:column;align-items:flex-start;gap:28px}
+  .hero-photo{order:-1;width:156px}
+}
 .eyebrow{
   font-family:var(--mono);font-size:13px;letter-spacing:.14em;
   text-transform:uppercase;color:var(--green);margin-bottom:20px;
@@ -92,6 +103,8 @@ section{padding:56px 0;border-bottom:1px solid var(--line)}
 .registry-row .r-name{font-weight:600;font-size:17.5px}
 .registry-row .r-org{color:var(--muted);font-size:15.5px}
 .registry-row .r-id{font-family:var(--mono);font-size:14px;color:var(--green-deep);margin-top:2px}
+.registry-row .r-id a{color:var(--green-deep);text-decoration:none;border-bottom:1px solid var(--line)}
+.registry-row .r-id a:hover{color:var(--green);border-color:var(--green)}
 .registry-row .r-dates{
   font-family:var(--mono);font-size:13.5px;color:var(--muted);
   text-align:right;align-self:start;grid-row:span 3;
@@ -216,15 +229,18 @@ footer .f-note{margin-top:28px;font-family:var(--mono);font-size:12.5px;color:va
 <body>
 
 <header class="hero">
-  <div class="wrap">
-    <p class="eyebrow">Pharmacist Portfolio</p>
-    <h1>Youyou Wang<span class="cred">PharmD, RPh</span></h1>
-    <p class="lede">Registered pharmacist licensed in <strong>California</strong>, trained across <strong>nine practice settings</strong> in New York — community, managed care, specialty, and hospital pharmacy.</p>
-    <p class="license-line"><span class="dot" aria-hidden="true"></span>California State Board of Pharmacy&nbsp;·&nbsp;RPH 92546&nbsp;·&nbsp;Active</p>
-    <nav class="hero-contact" aria-label="Contact">
-      <a href="https://linkedin.com/in/youyouwang0202" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a href="#resume">Resume ↓</a>
-    </nav>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">Pharmacist Portfolio</p>
+      <h1>Youyou Wang<span class="cred">PharmD, RPh</span></h1>
+      <p class="lede">Registered pharmacist licensed in <strong>California</strong>, trained across <strong>nine practice settings</strong> in New York — community, managed care, specialty, and hospital pharmacy.</p>
+      <p class="license-line"><span class="dot" aria-hidden="true"></span>California State Board of Pharmacy&nbsp;·&nbsp;RPH 92546&nbsp;·&nbsp;Active&nbsp;·&nbsp;<a href="https://search.dca.ca.gov/details/7200/RPH/92546/ca1f2b0e02c957cb7b17e55654360fd2" target="_blank" rel="noopener">Verify ↗</a></p>
+      <nav class="hero-contact" aria-label="Contact">
+        <a href="https://linkedin.com/in/youyouwang0202" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="#resume">Resume ↓</a>
+      </nav>
+    </div>
+    <img class="hero-photo" src="assets/avatar.jpg" alt="Youyou Wang in St. John's University doctoral regalia">
   </div>
 </header>
 
@@ -237,7 +253,7 @@ footer .f-note{margin-top:28px;font-family:var(--mono);font-size:12.5px;color:va
           <div>
             <div class="r-name">Registered Pharmacist License</div>
             <div class="r-org">California State Board of Pharmacy</div>
-            <div class="r-id">RPH 92546</div>
+            <div class="r-id"><a href="https://search.dca.ca.gov/details/7200/RPH/92546/ca1f2b0e02c957cb7b17e55654360fd2" target="_blank" rel="noopener">RPH 92546 · Verify license ↗</a></div>
           </div>
           <div class="r-dates"><span class="status">Active</span><span>Issued Jun 2026 · Expires Feb 2028</span></div>
         </div>
