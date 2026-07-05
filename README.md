@@ -2,13 +2,14 @@
 
 加州执业药师(PharmD, RPh)的个人 portfolio,参照专业临床医师个人站的结构:执照注册信息、按执业场景分组的经历、发表文献、简历预览/下载。
 
-## 现状
+## 现状:已全部上线 ✅
 
-- [x] 域名已购买(注册商:Squarespace;域名:_待填_)
+- [x] 域名:**wangyouyou888.com**(注册商 Squarespace,DNS 已指向 GitHub Pages)
 - [x] 网站建成:`index.html`(单页静态站,无框架)
 - [x] 简历 PDF 上线:页面内点击预览 + 下载(`assets/YouyouWang_CA_Pharmacy_Resume.pdf`)
-- [ ] 推到 GitHub,开 GitHub Pages
-- [ ] Squarespace 配 DNS,绑定自定义域名
+- [x] 仓库:https://github.com/RNCHEN/Y_domain (GitHub Pages, main 分支根目录)
+- [x] HTTPS 生效;`rnchen.github.io/Y_domain` 自动 301 到正式域名
+- [x] 隐私:页面不含电话/邮箱,联系方式仅 LinkedIn(原版简历 PDF 内仍含完整联系方式,属有意保留)
 
 ## 文件结构
 
