@@ -8,8 +8,8 @@
 
 ## At a glance
 
-- **California Registered Pharmacist** — License RPH 92546, active ([verify on CA DCA](https://search.dca.ca.gov/details/7200/RPH/92546/ca1f2b0e02c957cb7b17e55654360fd2))
 - **Doctor of Pharmacy**, St. John's University College of Pharmacy — GPA 3.71/4.0, Dean's List (Top 5%)
+- **California Registered Pharmacist** — License RPH 92546, active ([verify on CA DCA](https://search.dca.ca.gov/details/7200/RPH/92546/ca1f2b0e02c957cb7b17e55654360fd2))
 - Trained across **nine practice sites in four settings**: community, managed care, specialty & long-term care, and hospital pharmacy
 - **BLS certified** (American Heart Association) · APhA Pharmacy-Based Immunization Delivery Certificate
 - Published co-author in *Cancers* ([DOI: 10.3390/cancers15071963](https://doi.org/10.3390/cancers15071963))
