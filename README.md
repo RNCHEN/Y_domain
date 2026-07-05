@@ -9,7 +9,7 @@
 - [x] 简历 PDF 上线:页面内点击预览 + 下载(`assets/YouyouWang_CA_Pharmacy_Resume.pdf`)
 - [x] 仓库:https://github.com/RNCHEN/Y_domain (GitHub Pages, main 分支根目录)
 - [x] HTTPS 生效;`rnchen.github.io/Y_domain` 自动 301 到正式域名
-- [x] 隐私:页面不含电话/邮箱,联系方式仅 LinkedIn(原版简历 PDF 内仍含完整联系方式,属有意保留)
+- [x] 隐私:页面展示邮箱 + LinkedIn + 地点(Los Angeles, CA);电话只在简历 PDF 内,属有意保留
 
 ## 文件结构
 
